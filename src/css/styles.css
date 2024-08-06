@@ -25,19 +25,56 @@
 }
 
 
-/* My homework */
+/*========== My homework ==========*/
 
-.feedback-form{
-  border-radius: 8px;
-    padding: 24px;
-    width: 408px;
-};
+/*========== Task 1 ==========*/
 
-.form-label-email{
-  width: 360px;
-  height: 72px;
-};
-
-.form-box{
+.gallery{
   display: flex;
+  flex-wrap: wrap;
+  width: 1128px;
+  gap: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*========== Task 2 ==========*/
+
+.feedback-form {
+  border-radius: 8px;
+  width: 408px;
+  height: 296px;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+};
+
+label{
+  flex-direction: column;
+  
+}
+
+.feedback-form label input[type="email"] {
+  margin-bottom: 8px;
+    width: 360px;
+    height: 39px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feedback-form label textarea[type="message"] {
+  width: 360px;
+  height: 112px;
+};
+
+button{
+  border-radius: 8px;
+    padding: 8px 16px;
+    width: 95px;
+    height: 40px;
+    background: #4e75ff;
+    margin-top: 16px;
 }

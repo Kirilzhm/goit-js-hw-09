@@ -62,6 +62,8 @@ const image = images.map(({ preview, original, description }) => {
         class="gallery-image" 
         src="${preview}" 
         alt="${description}" 
+        width = 360
+        height = 200
       />
     </a>
   </li>`;
