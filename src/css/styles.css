@@ -23,3 +23,21 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
+/* My homework */
+
+.feedback-form{
+  border-radius: 8px;
+    padding: 24px;
+    width: 408px;
+};
+
+.form-label-email{
+  width: 360px;
+  height: 72px;
+};
+
+.form-box{
+  display: flex;
+}
