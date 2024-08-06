@@ -14,7 +14,7 @@ function saveToLocalStorage() {
 function updateFormData(event) {
     const { name, value } = event.target;
     formData[name] = value;
-    saveToLocalStorage;
+    saveToLocalStorage();
 };
 
 function returningValuesFromLocalStorageInInput() {
@@ -23,6 +23,31 @@ function returningValuesFromLocalStorageInInput() {
         const { email, message } = JSON.parse(savedData);
         formData.email = email;
         formData.message = message;
-        email
+        emailInput.value = email;
+        messageInput.value = message;
     }
-}
+};
+
+function workWithLocalStorage(event) {
+    event.preventDefault();
+
+    const email = formData.email.trim();
+    const message = formData.message.trim();
+    if (!email || !message) {
+        alert(`Fill please all fields`);
+        return;
+    }
+
+    console.log(formData);
+
+    emailInput.value = '';
+    messageInput.value = '';
+    localStorage.removeItem('feedback-form-state');
+    formData.email = '';
+    formData.message = '';
+};
+
+form.addEventListener(`input`, updateFormData);
+form.addEventListener(`submit`, workWithLocalStorage);
+
+returningValuesFromLocalStorageInInput();
